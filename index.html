@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Book Store</title>
+</head>
+
+<body onload="onInit()">
+    <header class="flex justify-content align-items">
+        <h1 data-trans="page-title">Welcome to my Book Shop</h1>
+        <div class="header-btn flex">
+            <select onchange="onSetLang(this.value)">
+                <option value="en">English</option>
+                <option value="he">עברית</option>
+            </select>
+            <button class="new-book" onclick="onAddBook()"><span data-trans="new-book">Create New Book</span></button>
+        </div>
+    </header>
+
+    <table class="table main-content">
+        <thead class="table-head">
+            <th scope="col">ID</th>
+            <th scope="col" onclick="onSortBooks(this.innerText)"><span data-trans="book-title">Title</span></th>
+            <th scope="col" onclick="onSortBooks(this.innerText)"><span data-trans="book-price">Price</span></th>
+            <th scope="col" onclick="onSortBooks(this.innerText)"><span data-trans="book-rating">Rating</span></th>
+            <th colspan="3" scope="col"><span data-trans="book-action">Action</span></th>
+        </thead>
+        <tbody class="table-render">
+        </tbody>
+    </table>
+
+
+    <div class="modal-injection">
+    </div>
+
+    <div class="nav-pages main-content flex justify-content">
+        <button class="previous" onclick="onPrevPage()"><span data-trans="prev-page">Previous</span></button>
+        <button class="next" onclick="onNextPage()"><span data-trans="next-page">Next</span></button>
+    </div>
+    <footer class="flex justify-content align-items">
+        <p>all copyRights saves</p>
+    </footer>
+
+    <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="js/services/util.services.js"></script>
+    <script src="js/services/i18n.service.js"></script>
+    <script src="js/services/storage.services.js"></script>
+    <script src="js/services/book.services.js"></script>
+    <script src="js/book.controller.js"></script>
+</body>
+
+</html>
