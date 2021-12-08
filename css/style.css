@@ -26,7 +26,7 @@ body {
 
 header {
     height: 40vh;
-    /* background-color: darkslategray; */
+    background-color: darkslategray;
     background-image: url('/img/top-view-books-arrangement.png');
     flex-direction: column;
     margin-bottom: 3rem;
